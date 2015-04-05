@@ -4,6 +4,10 @@ require('icebreaker-agent')
 
 if(!_.agents)_.mixin({agents:{}})
 
+function isFunction(obj) {
+  return typeof obj === 'function'
+}
+
 _.mixin({
   consul: _.agent({
     name: 'consul',
