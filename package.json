@@ -1,0 +1,25 @@
+{
+  "name": "icebreaker-agent-consul",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alligator-io/icebreaker-agent-consul.git"
+  },
+  "author": "Markus Wunderlin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alligator-io/icebreaker-agent-consul/issues"
+  },
+  "homepage": "https://github.com/alligator-io/icebreaker-agent-consul",
+  "dependencies": {
+    "consul": "^0.14.0",
+    "icebreaker": "^0.6.0",
+    "moment": "^2.9.0",
+    "icebreaker-agent":"git+https://github.com/alligator-io/icebreaker-agent.git"
+  }
+}
