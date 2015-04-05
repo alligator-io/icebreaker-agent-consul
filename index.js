@@ -66,7 +66,7 @@ _.mixin({
               _(
                   _.keys(services),
                   _.filter(function (service) {
-                    return services[service].indexOf('alligator') >= 0
+                    return services[service].indexOf('icebreaker') >= 0
                   }),
                   _.asyncMap(function (m, cb) {
                     consul.catalog.service.nodes(m, function (err, r) {
