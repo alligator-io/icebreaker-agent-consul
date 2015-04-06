@@ -19,7 +19,7 @@
   "dependencies": {
     "consul": "^0.14.0",
     "icebreaker": "^0.6.0",
-    "moment": "^2.9.0",
-    "icebreaker-agent":"git+https://github.com/alligator-io/icebreaker-agent.git"
+    "icebreaker-agent": "^0.1.0",
+    "moment": "^2.9.0"
   }
 }
