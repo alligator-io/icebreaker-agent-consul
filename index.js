@@ -70,17 +70,17 @@ _.mixin({
                   return services[service].indexOf('icebreaker') >= 0
                 }),
                 _.asyncMap(function (m, cb) {
-                  consul.catalog.service.nodes(m, function (err, r) {
-                    cb(err, r)
+                  consul.health.service({service:m,tag:'icebreaker',passing:true}, function(err, r) {
+                    cb(err,!err?r:null)
                   })
                   return m
                 }),
                 _.flatten(),
                 _.map(function (item) {
                   return {
-                    name: item.ServiceName.replace(self.prefix, ''),
-                    address: item.ServiceAddress,
-                    port: item.ServicePort
+                    name: item.Service.ID.replace(self.prefix, ''),
+                    address: item.Service.Address,
+                    port: item.Service.Port
                   }
                 }),
                 _.asyncMap(function (peer, cb) {
