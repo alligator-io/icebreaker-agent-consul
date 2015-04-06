@@ -1,7 +1,7 @@
 {
   "name": "icebreaker-agent-consul",
   "version": "0.1.0",
-  "description": "",
+  "description": "Consul agent for icebreaker peers.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,6 +16,11 @@
     "url": "https://github.com/alligator-io/icebreaker-agent-consul/issues"
   },
   "homepage": "https://github.com/alligator-io/icebreaker-agent-consul",
+  "keywords": [
+    "agent",
+    "consul",
+    "icebreaker"
+  ],
   "dependencies": {
     "consul": "^0.14.0",
     "icebreaker": "^0.6.0",
