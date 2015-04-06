@@ -61,7 +61,7 @@ _.mixin({
             consul.catalog.service.list({
               tag: 'icebreaker'
 
-            }, function (err, services) {
+            },function (err, services) {
               if (err) return console.error(err)
               _(
                   _.keys(services),
@@ -105,7 +105,7 @@ _.mixin({
             })
 
 
-            _(_.peers.list(), _.drain(function (p) {
+            _(list(), _.drain(function (p) {
               consul.agent.check.pass('service:' + _.config.name + '@' + p.name, function (err) {
                 if (err) return console.error(err)
               })
