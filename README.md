@@ -9,7 +9,7 @@ npm install icebreaker-agent-consul
 var _ = require('icebreaker')
 require('icebreaker-peer-net')
 require('icebreaker-msgpack')
-require('./')
+require('icebreaker-agent-consul')
 
 var peer =  _.peers.net({port:8986})
 
