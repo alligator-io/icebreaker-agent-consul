@@ -1,6 +1,6 @@
 {
   "name": "icebreaker-agent-consul",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Consul agent for icebreaker peers.",
   "main": "index.js",
   "scripts": {
