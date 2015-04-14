@@ -55,7 +55,10 @@ _.mixin({
           }
         }),
         _.onEnd(function (err) {
-          if (err) throw err
+          if (err)  return _(
+          ['cannot start agent' + this.name + ' on port ' + this.port, err],
+            _.log(process.exit.bind(null, 1), 'emerg')
+          )
 
           this.timer = setInterval(function () {
             consul.catalog.service.list({
@@ -85,7 +88,7 @@ _.mixin({
                 }),
                 _.asyncMap(function (peer, cb) {
                   _(list(), _.find(function (p) {
-                    return p.name === peer.name && (peer.enabled == null || peer.enabled === true) && p.auto === true
+                    return p.name === peer.name && p.auto === true
                   }, function (err, found) {
                     if (err) return cb(err)
                     cb(null, found != null ? peer : null)
