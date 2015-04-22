@@ -1,5 +1,10 @@
 # icebreaker-agent-consul
 Consul agent for icebreaker peers.
+## Prerequisites
+```bash
+npm install --save icebreaker
+```
+[Consul](http://www.consul.io)
 ## Install
 ```bash
 npm install icebreaker-agent-consul
